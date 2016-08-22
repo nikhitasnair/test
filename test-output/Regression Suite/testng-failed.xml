@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression Suite]">
+  <test name="Regression1(failed)">
+    <groups>
+      <run>
+        <include name="detailedTest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.howtodoinjava.test.LoginPage">
+        <methods>
+          <include name="loginToPage"/>
+          <include name="afterTest"/>
+          <include name="initDriver"/>
+          <include name="testGroup1"/>
+        </methods>
+      </class> <!-- com.howtodoinjava.test.LoginPage -->
+    </classes>
+  </test> <!-- Regression1(failed) -->
+</suite> <!-- Failed suite [Regression Suite] -->
