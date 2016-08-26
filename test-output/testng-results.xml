@@ -2,36 +2,36 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Regression Suite" duration-ms="29679" started-at="2016-08-22T11:55:26Z" finished-at="2016-08-22T11:55:56Z">
+  <suite name="Regression Suite" duration-ms="55728" started-at="2016-08-26T12:41:12Z" finished-at="2016-08-26T12:42:08Z">
     <groups>
       <group name="detailedTest">
-        <method signature="LoginPage.loginToPage()[pri:0, instance:com.howtodoinjava.test.LoginPage@4b5eddd8]" name="loginToPage" class="com.howtodoinjava.test.LoginPage"/>
-        <method signature="LoginPage.testGroup1()[pri:0, instance:com.howtodoinjava.test.LoginPage@4b5eddd8]" name="testGroup1" class="com.howtodoinjava.test.LoginPage"/>
+        <method signature="LoginPage.loginToPage()[pri:0, instance:com.howtodoinjava.test.LoginPage@1f67e563]" name="loginToPage" class="com.howtodoinjava.test.LoginPage"/>
+        <method signature="LoginPage.testGroup1()[pri:0, instance:com.howtodoinjava.test.LoginPage@1f67e563]" name="testGroup1" class="com.howtodoinjava.test.LoginPage"/>
       </group> <!-- detailedTest -->
       <group name="basicFuncTest">
-        <method signature="LoginPage.loginToPage()[pri:0, instance:com.howtodoinjava.test.LoginPage@4b5eddd8]" name="loginToPage" class="com.howtodoinjava.test.LoginPage"/>
-        <method signature="LoginPage.testGroup1()[pri:0, instance:com.howtodoinjava.test.LoginPage@4b5eddd8]" name="testGroup1" class="com.howtodoinjava.test.LoginPage"/>
+        <method signature="LoginPage.loginToPage()[pri:0, instance:com.howtodoinjava.test.LoginPage@1f67e563]" name="loginToPage" class="com.howtodoinjava.test.LoginPage"/>
+        <method signature="LoginPage.testGroup1()[pri:0, instance:com.howtodoinjava.test.LoginPage@1f67e563]" name="testGroup1" class="com.howtodoinjava.test.LoginPage"/>
       </group> <!-- basicFuncTest -->
     </groups>
-    <test name="Regression1" duration-ms="29679" started-at="2016-08-22T11:55:26Z" finished-at="2016-08-22T11:55:56Z">
+    <test name="Regression1" duration-ms="55728" started-at="2016-08-26T12:41:12Z" finished-at="2016-08-26T12:42:08Z">
       <class name="com.howtodoinjava.test.LoginPage">
-        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.howtodoinjava.test.LoginPage@4b5eddd8]" name="initDriver" is-config="true" duration-ms="28672" started-at="2016-08-22T12:55:26Z" finished-at="2016-08-22T12:55:55Z">
+        <test-method status="PASS" signature="initDriver()[pri:0, instance:com.howtodoinjava.test.LoginPage@1f67e563]" name="initDriver" is-config="true" duration-ms="28420" started-at="2016-08-26T13:41:12Z" finished-at="2016-08-26T13:41:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="loginToPage()[pri:0, instance:com.howtodoinjava.test.LoginPage@4b5eddd8]" name="loginToPage" duration-ms="894" started-at="2016-08-22T12:55:55Z" finished-at="2016-08-22T12:55:56Z">
+        <test-method status="PASS" signature="loginToPage()[pri:0, instance:com.howtodoinjava.test.LoginPage@1f67e563]" name="loginToPage" duration-ms="27256" started-at="2016-08-26T13:41:41Z" finished-at="2016-08-26T13:42:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToPage -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.howtodoinjava.test.LoginPage@4b5eddd8]" name="afterTest" is-config="true" duration-ms="1" started-at="2016-08-22T12:55:56Z" finished-at="2016-08-22T12:55:56Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.howtodoinjava.test.LoginPage@1f67e563]" name="afterTest" is-config="true" duration-ms="1" started-at="2016-08-26T13:42:08Z" finished-at="2016-08-26T13:42:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="testGroup1()[pri:0, instance:com.howtodoinjava.test.LoginPage@4b5eddd8]" name="testGroup1" duration-ms="17" started-at="2016-08-22T12:55:56Z" finished-at="2016-08-22T12:55:56Z">
+        <test-method status="PASS" signature="testGroup1()[pri:0, instance:com.howtodoinjava.test.LoginPage@1f67e563]" name="testGroup1" duration-ms="5" started-at="2016-08-26T13:42:08Z" finished-at="2016-08-26T13:42:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGroup1 -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.howtodoinjava.test.LoginPage@4b5eddd8]" name="afterTest" is-config="true" duration-ms="1" started-at="2016-08-22T12:55:56Z" finished-at="2016-08-22T12:55:56Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.howtodoinjava.test.LoginPage@1f67e563]" name="afterTest" is-config="true" duration-ms="1" started-at="2016-08-26T13:42:08Z" finished-at="2016-08-26T13:42:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

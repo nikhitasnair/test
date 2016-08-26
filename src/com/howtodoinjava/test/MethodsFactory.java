@@ -18,14 +18,22 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class MethodsFactory {
-WebDriver driver;
-BrowserSetup browser=new BrowserSetup();
-ElementFactory ef=new ElementFactory();
+public class MethodsFactory extends ElementFactory{
 
-	public void dropdownSelection()
+//BrowserSetup browser=new BrowserSetup();
+static ElementFactory ef=new ElementFactory();
+//WebDriver driver;
+     public static String getPageText() {
+	
+     String Homepagetext=BrowserSetup.driver.findElement(ef.pageText).getText();
+     System.out.println("Value is abcd");
+	return Homepagetext;
+	
+	
+}
+	public static void dropdownSelection()
 	{
-	WebElement dropdownElement = driver.findElement(ef.dropDown);
+	WebElement dropdownElement = BrowserSetup.driver.findElement(ef.dropDown);
 	Select dropdownsel=new Select(dropdownElement);
 	
 	if(appConfigCall.DropdownSelectBy=="index")
@@ -46,7 +54,7 @@ ElementFactory ef=new ElementFactory();
 	{		
 		if(appConfigCall.RadioSelectBy=="id")
 		{
-		WebElement radioBtn = driver.findElement(ef.radioButtonId);
+		WebElement radioBtn = BrowserSetup.driver.findElement(ef.radioButtonId);
 		radioBtn.click();
 		}
 		
@@ -101,9 +109,9 @@ ElementFactory ef=new ElementFactory();
 		 public void CheckImage() throws Exception {
 			 //driver.get(appConfigCall.URL);
 
-			 WebElement ImageFile = browser.driver.findElement(ef.image);
+			 WebElement ImageFile = BrowserSetup.driver.findElement(ef.image);
 
-			     Boolean ImagePresent = (Boolean) ((JavascriptExecutor)driver).executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", ImageFile);
+			     Boolean ImagePresent = (Boolean) ((JavascriptExecutor)BrowserSetup.driver).executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", ImageFile);
 			     if (!ImagePresent)
 			     {
 			          System.out.println("Image not displayed.");

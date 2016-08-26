@@ -13,9 +13,11 @@ public class appConfigCall {
 	public static String BrowserType = null;
 	public static String DropdownSelectBy = null;
 	public static String RadioSelectBy = null;
+	public static String CurrentURL = null;
+	public static String Title= null;
 	
 	public static void configMethod()  {
-		File configFile = new File("C:/Users/NAIRNX/workspace/LCProject/Config files/AppConfig.Properties");
+		File configFile = new File("C:/Users/NAIRNX/workspace/test/Config files/AppConfig.Properties");
 		Properties prop = new Properties();
 		FileInputStream fileInput = null;
 			try { 
@@ -32,6 +34,8 @@ public class appConfigCall {
 				BrowserType=prop.getProperty("browserType");
 				DropdownSelectBy=prop.getProperty("dropdownSelectBy");
 				RadioSelectBy=prop.getProperty("radioSelectBy");
+				CurrentURL=prop.getProperty("currentURL");
+				Title=prop.getProperty("title");
 				
 				} catch (IOException e) {
 				e.printStackTrace();

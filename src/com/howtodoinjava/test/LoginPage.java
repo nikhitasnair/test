@@ -1,6 +1,8 @@
 package com.howtodoinjava.test;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -10,29 +12,36 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 
-public class LoginPage {
+public class LoginPage extends MethodsFactory{
 
 	
-	 //Properties prop = new Properties();
+	 WebDriver driver;
+	//Properties prop = new Properties();
 	 //appConfigCall aCC=new appConfigCall();
-	 BrowserSetup browser=new BrowserSetup();
+	 BrowserSetup browser=new BrowserSetup(driver);
 	 ElementFactory ef=new ElementFactory();
 	 MethodsFactory mf=new MethodsFactory();
+	 appConfigCall appConfigCall=new appConfigCall();
 	 
- 
+
 @Test (groups={"basicFuncTest","detailedTest"})
 
 	  public void loginToPage() {
 	 	try {
+	 	
+		BrowserSetup.driver.get(appConfigCall.URL);
+		BrowserSetup.driver.findElement(ef.userNameElement).sendKeys(appConfigCall.Username);
+		BrowserSetup.driver.findElement(ef.passwordElement).sendKeys(appConfigCall.Password);
+		BrowserSetup.driver.findElement(ef.loginElement).click();
 		
-		browser.driver.findElement(ef.userNameElement).sendKeys(appConfigCall.Username);
-		browser.driver.findElement(ef.passwordElement).sendKeys(appConfigCall.Password);
-		browser.driver.findElement(ef.loginElement).click();
-
+		
+	MethodsFactory.getPageText();
+			
 	  }catch (NullPointerException e) {
 			e.printStackTrace();
 		}
 }
+
 @Test(groups={"basicFuncTest","detailedTest"})
 public void testGroup1()
 {
@@ -47,7 +56,7 @@ public void testGroup2()
   @BeforeTest(alwaysRun = true)
    public void initDriver() throws Exception { 
         appConfigCall.configMethod();
-        browser.setDriver(appConfigCall.BrowserType, appConfigCall.URL);
+        BrowserSetup.setDriver(appConfigCall.BrowserType, appConfigCall.URL);
         
   } 
 

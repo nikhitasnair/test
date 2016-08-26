@@ -22,5 +22,6 @@ public class ElementFactory {
      
     public By image = By.xpath("//img[contains(@id,'logo-header'])]");
     
+    public By pageText = By.xpath("//div[@id='navbar']/div[2]/div/a");
 
 }

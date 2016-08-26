@@ -7,10 +7,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserSetup {
-	 WebDriver driver;
+	 static WebDriver driver;
 	static appConfigCall aCC=new appConfigCall();
 	
-	public void setDriver(String browserType, String URL){
+	
+
+	public BrowserSetup(WebDriver driver2) {
+		
+	}
+
+	public static void setDriver(String browserType, String URL){
 	switch (browserType) {
 	case "chrome":
 		driver = initChromeDriver(URL);
